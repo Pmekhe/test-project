@@ -1,29 +1,19 @@
-def add(a, b):
-    return a + b
+import math
 
-def subtract(a, b):
-    return a - b
+def scientific_calculator():
+    print("Scientific Calculator")
+    print("1. Square root\n2. Power")
 
-def multiply(a, b):
-    return a * b
+    choice = input("Enter choice: ")
 
-def divide(a, b):
-    return a / b
+    if choice == '1':
+        x = float(input("Enter number: "))
+        print("Result:", math.sqrt(x))
+    elif choice == '2':
+        base = float(input("Enter base: "))
+        exp = float(input("Enter exponent: "))
+        print("Result:", math.pow(base, exp))
+    else:
+        print("Invalid choice")
 
-print("Simple Calculator")
-print("1. Add\n2. Subtract\n3. Multiply\n4. Divide")
-
-choice = input("Enter choice: ")
-a = float(input("Enter first number: "))
-b = float(input("Enter second number: "))
-
-if choice == '1':
-    print("Result:", add(a, b))
-elif choice == '2':
-    print("Result:", subtract(a, b))
-elif choice == '3':
-    print("Result:", multiply(a, b))
-elif choice == '4':
-    print("Result:", divide(a, b))
-else:
-    print("Invalid choice")
+scientific_calculator()
